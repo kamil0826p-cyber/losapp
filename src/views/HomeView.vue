@@ -11,7 +11,12 @@
           <router-link to="/register" class="btn btn-primary btn-lg">
             Get Started Free 🚀
           </router-link>
-          <button class="btn btn-secondary btn-lg" @click="openChangelog">View Changelog 📋</button>
+          <a
+            href="https://github.com/kamil0826p-cyber/losapp"
+            target="_blank"
+            class="btn btn-secondary btn-lg"
+            >Get source code 📋</a
+          >
         </div>
       </div>
       <div class="hero-visual">
@@ -38,60 +43,10 @@
         <p>Your data and creations are protected.</p>
       </div>
     </div>
-
-    <!-- Changelog Modal -->
-    <BaseModal :isOpen="isChangelogOpen" title="Changelog" @close="closeChangelog" maxWidth="600px">
-      <div class="changelog-content">
-        <div class="changelog-section">
-          <h4>🚀 Already Implemented</h4>
-          <ul>
-            <li>Account settings</li>
-            <li>Redesign all pages</li>
-            <li>Security - implement authorization logs</li>
-            <li>Improve registration system</li>
-            <li>Code refactor</li>
-            <li>Profile page UI</li>
-            <li>Contact page UI</li>
-            <li>Migrate app from Vue Cli to Vite</li>
-            <li>Animation performance optimization</li>
-            <li>Loading info top bar</li>
-            <li>RODO component</li>
-            <li>UI improvements</li>
-            <li>Client-side route guarding</li>
-            <li>Implemented server-side anti-flood protection</li>
-            <li>Complete user authentication with Firebase</li>
-            <li>Vue client-side app and backend successfully set up</li>
-          </ul>
-        </div>
-
-        <div class="changelog-section">
-          <h4>🚧 In Progress</h4>
-          <ul>
-            <li>Advanced AI model integration</li>
-          </ul>
-        </div>
-      </div>
-      <template #footer>
-        <button class="btn btn-secondary" @click="closeChangelog">Close</button>
-      </template>
-    </BaseModal>
   </div>
 </template>
 
-<script setup lang="ts">
-import { ref } from 'vue'
-import BaseModal from '@/components/ui/BaseModal.vue'
-
-const isChangelogOpen = ref(false)
-
-const openChangelog = () => {
-  isChangelogOpen.value = true
-}
-
-const closeChangelog = () => {
-  isChangelogOpen.value = false
-}
-</script>
+<script setup lang="ts"></script>
 
 <style scoped>
 .home-container {
@@ -262,47 +217,6 @@ const closeChangelog = () => {
 .feature-card p {
   color: #6b7280;
   line-height: 1.6;
-}
-
-/* Changelog Content */
-.changelog-content {
-  padding: 10px 0;
-}
-
-.changelog-section {
-  margin-bottom: 24px;
-}
-
-.changelog-section h4 {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #111827;
-  margin-bottom: 12px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.changelog-section ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.changelog-section li {
-  position: relative;
-  padding-left: 24px;
-  margin-bottom: 8px;
-  color: #4b5563;
-  line-height: 1.5;
-}
-
-.changelog-section li::before {
-  content: '•';
-  color: var(--brand);
-  position: absolute;
-  left: 8px;
-  font-weight: bold;
 }
 
 /* Responsive */
