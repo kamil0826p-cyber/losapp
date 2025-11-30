@@ -34,3 +34,7 @@ coverage
 
 # Vitest
 __screenshots__/
+
+# Firebase
+firebase-key.json
+backend/firebase-key.json
