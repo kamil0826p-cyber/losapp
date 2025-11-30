@@ -23,16 +23,16 @@ const consent = useConsentStore()
 
 watch(
   () => consent.hasConsent,
-  (enabled: boolean) => {
+  async (enabled: boolean) => {
     if (enabled) {
-      // Consent granted
+      await logVisitor()
     }
   },
 )
 
 onMounted(async () => {
   try {
-    await logVisitor()
+    // await logVisitor()
   } catch {
     // Silent error
   }
